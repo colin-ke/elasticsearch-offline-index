@@ -101,6 +101,7 @@ public class JobHelper {
 		return jobFuture;
 	}
 
+	@Deprecated
 	public JobFuture execute(String hadoopHome, String jarPath) throws Exception {
 		logger.info("hadoopHome: " + hadoopHome);
 		logger.info("map-reduce job jar path: " + jarPath);
@@ -139,6 +140,7 @@ public class JobHelper {
 		return jobFuture;
 	}
 
+	@Deprecated
 	public JobFuture execute(String hadoopHome) throws Exception {
 		String jarPath = JobMain.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		if (!jarPath.endsWith(".jar")) {
